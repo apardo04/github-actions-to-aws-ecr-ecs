@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "Basic http server",
+  "main": "server.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
+    "start": "cross-env NODE_ENV=production nodemon --exec babel-node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node server.js",
+    "prod": "cross-env NODE_ENV=production nodemon --exec babel-node server.js"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.9",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "core-js": "^3.6.4",
+    "cross-env": "^7.0.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "regenerator-runtime": "^0.13.3",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+  }
+}
